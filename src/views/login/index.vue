@@ -1,12 +1,10 @@
 <template>
-  <div class="text">
-    About
-  </div>
+  <div class="index"></div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: 'index',
   data() {
     return {}
   },
@@ -17,8 +15,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.text {
-  color: $warning-color;
-}
-</style>
+<style lang="scss" scoped></style>

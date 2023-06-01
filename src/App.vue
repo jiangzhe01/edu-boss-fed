@@ -3,23 +3,36 @@
     <h1>拉勾教育</h1>
     <!-- 根路由出口, 用于渲染路由组件 -->
     <router-view />
-
-    <!-- 测试element ui 组件是否生效, 过后删除 -->
-    <el-row>
-      <el-button>默认按钮</el-button>
-      <el-button type="primary">主要按钮</el-button>
-      <el-button type="success">成功按钮</el-button>
-      <el-button type="info">信息按钮</el-button>
-      <el-button type="warning">警告按钮</el-button>
-      <el-button type="danger">危险按钮</el-button>
-    </el-row>
   </div>
 </template>
 
-<style lang="scss">
-@import '~@/styles/variables.scss';
+<script>
+import request from "@/utils/request"
 
- .text {
- color: $warning-color;
- }
+request({
+  method: "GET",
+  // 某个后台接⼝
+  // url: '/boss/v2/api-docs?group=edu-boss-boot'
+  // 某个前台接⼝ url
+  url: "/front/ad/getAdList"
+}).then((res) => {
+  console.log("响应内容：", res)
+})
+
+export default {
+  name: "index",
+  data() {
+    return {}
+  },
+  components: {},
+  created() {},
+  mounted() {},
+  methods: {}
+}
+</script>
+
+<style lang="scss">
+.text {
+  color: $warning-color;
+}
 </style>
